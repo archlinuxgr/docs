@@ -1,8 +1,11 @@
 ArchlinuxGR Repo Documentation (basically a How-To), crafted using sphinx. 
-In order to build it
+
+How to build
+============
 
 * istall sphinx 
 * clone the repo and cd into it 
-* run 
-	make html
-to build an html based document. If you want to see what other formats are supported simply run make.
+* to build an html based document run ::
+		make html
+
+Execute make without an argument to see which targets are available.
