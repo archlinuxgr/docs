@@ -16,7 +16,36 @@
 Το πακέτο devtools
 ==================
 
-Οι developers του Arch μας έχουν κάνει τη ζωή εύκολη με το πακέτο :file:`devtools` που στη ουσία είναι ένα πακέτο από scripts για την αυτόματη δημιουργία fakeroot environments καθώς και το χτίσιμο των πακέτων μέσα σε αυτά.
+Οι developers του Arch μάς έχουν κάνει τη ζωή εύκολη με το πακέτο :file:`devtools` που στη ουσία είναι ένα πακέτο από scripts για την αυτόματη δημιουργία fakeroot environments καθώς και το χτίσιμο των πακέτων μέσα σε αυτά.
 Αρχικά το εγκαθιστούμε με ::
 		# pacman -S devtools
+
+Το πακέτο αυτό εγκαθιστά στο /usr/bin τα παρακάτω scripts ::
+		extra-i686-build
+		extra-x86_64-build
+		testing-i686-build
+		testing-x86-64-build
+		staging-i686-build
+		staging-x86_64-build
+		gnome-unstable-i686-build
+		gnome-unstable-x86_64-build
+		kde-unstable-i686-build
+		kde-unstable-x86-64-build
+		multilib-build
+		multilib-testing-build
+		multilib-staging-build
+		
+τα οποία είναι στην ουσία symlinks του  :file:`/usr/bin/archbuild`.
+Εμείς θα χρησιμοποιήσουμε τα δύο πρώτα: :file:`extra-i686-build & extra-x86_64-build`.
+
+Χρήση του archbuild
+===================
+
+Η συνήθης διαδικασία για να χτίσουμε το πακέτο foo, του οποίου το PKGBUILD βρίσκεται πχ. στο /home/user/foo είναι η εξής ::
+		cd /home/user/foo
+		makepkg
+		
+Όταν χτίζουμε σε chroot το μόνο που αλλάζει είναι η εντολή :file:`makepkg` σε :file:`extra-i686-build` ή :file:`extra-x86_64-build`, 
+ανάλογα αν χτίζουμε για 32bits ή 64bits αντίστοιχα. Όλα τα πα
+
 
