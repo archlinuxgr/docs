@@ -9,7 +9,7 @@ ArchlinuxGR Repo Guide
 
 #. Εγκαθιστούμε το sphinx (version 2). Σε arch αρκεί ένα :: 
 
-		# pacman -Syu python2-sphinx
+		# pacman -S python2-sphinx
  
 #. Κλωνοποίηση του repository ::
 
