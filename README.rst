@@ -2,13 +2,21 @@
 ArchlinuxGR Repo Guide
 ==========================================================================
 
-How to build
-============
+Οδηγός για τους maintainers του ελληνικού archlinux repository.
 
-* istall sphinx 
-* clone the repo and cd into it 
-* to build an html based document run ::	
+Πως να το χτίσετε τοπικά
+========================
+
+#. Εγκαθιστούμε το sphinx (version 2). Σε arch αρκεί ένα :: 
+
+		# pacman -Syu python2-sphinx
+ 
+#. Κλωνοποίηση του repository ::
+
+		git clone git://github.com:archlinux-greece/docs.git
+
+#. Για το χτίσιμο ενός html based αρχείου ::	
 		
 		make html
 
-Execute make without an argument to see which targets are available.
+Εκτελώντας την εντολή `make` χωρίς argument μπορεί κανείς να δει σε τι άλλα formats μπορεί να γίνει compile.
