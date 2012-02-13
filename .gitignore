@@ -1,3 +1,3 @@
 *.swp
 _build/
-copy.sh
+*.sh
