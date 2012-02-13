@@ -2,11 +2,15 @@
 Χρήση του git για το tracking των PKGBUILDs
 ===========================================
 
-Gitorious: http://gitorious.org/archlinuxgr-repo/archlinuxgr-repo
+*Το remote repository είναι στο gitorious\.org: http://gitorious.org/archlinuxgr-repo/archlinuxgr-repo*
 
 Εγκατάσταση
 -----------
+Πολύ απλά, δίνοντας:: 
 
+	#pacman -S git
+
+εγκαθιστάται το ``git`` :)
 
 Δημιουργία ssh keys
 -------------------
@@ -22,7 +26,7 @@ Clone του repository
 
 Προσθήκη δικών μας πακέτων
 --------------------------
-
+admin
 
 Pull, commit, push και άλλα καλούδια
 ------------------------------------
