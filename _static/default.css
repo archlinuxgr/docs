@@ -9,8 +9,8 @@ body {
     letter-spacing: -0.01em;
     line-height: 150%;
     text-align: center;
-    /*background-color: #AFC1C4; */
-    background-color: #BFD1D4;
+  /*  background-color: #f6f9fc; /*white*/ 
+    background-color: #ecf2f5; /* pale blue-white */
     color: black;
     padding: 0;
     border: 1px solid #aaa;
@@ -20,12 +20,12 @@ body {
 }
 
 a {
-    color: #CA7900;
+    color: #1793D1; /*light blue*/
     text-decoration: none;
 }
 
 a:hover {
-    color: #2491CF;
+    color: #F6F7FC; /*pale white */
 }
 
 pre {
@@ -34,7 +34,7 @@ pre {
     letter-spacing: 0.015em;
     padding: 0.5em;
     border: 1px solid #ccc;
-    background-color: #f8f8f8;
+    background-color: #ecf2f5;/*light grey*/
 }
 
 td.linenos pre {
@@ -91,11 +91,11 @@ a tt {
     background-color: transparent;
     font-weight: bold;
     border: 0;
-    color: #CA7900;
+    color: #CA7900;/*brown-orange*/
 }
 
 a tt:hover {
-    color: #2491CF;
+    color: #2491CF;/*blue*/
 }
 
 dl {
@@ -122,7 +122,7 @@ dd {
 
 dt:target,
 .highlight {
-    background-color: #fbe54e;
+    background-color: #fbe54e; /*lght yellow*/
 }
 
 dl.class, dl.function {
@@ -152,7 +152,7 @@ pre a {
 }
 
 div.document {
-    background-color: white;
+    background-color: #F6F9FC;
     text-align: left;
     background-image: url(contents.png);
     background-repeat: repeat-x;
@@ -202,7 +202,7 @@ div.related ul li a {
 }
 
 div.related ul li a:hover {
-    color: #3CA8E7;
+    color: #3CA8E7;/*light blue*/
 }
 
 div.body {
@@ -262,7 +262,7 @@ h1 {
     margin: 0;
     padding: 0.7em 0 0.3em 0;
     font-size: 1.5em;
-    color: #11557C;
+    color: #11557C; /*dark blue*/
 }
 
 h2 {
