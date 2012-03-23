@@ -4,8 +4,6 @@
 
 Το git είναι ένα εργαλείο της κατηγορίας VCS (Version Control System) που μας βοηθάει να κρατάμε track των αλλαγών που γίνονται σε ένα αρχείο. Γράφτηκε από τον Linus Torlvalds για το track του linux kernel και είναι πλεόν ένα από τα πιο διαδεδομένα εργαλεία collaboration μεταξύ developers σε όλο τον κόσμο. Για τους σκοπούς του άρθρου και του tracking των PKGBUILDs θα αναφερθούμε μόνο σε όσα μας ενδιαφέρουν. Όποιος επιθυμεί να ψαχτεί παραπάνω υπάρχουν άπειροι οδηγοί στο Internet.
 
-*Το remote repository είναι στο gitorious\.org: http://gitorious.org/archlinuxgr-repo/archlinuxgr-repo*
-
 Εγκατάσταση
 -----------
 Πολύ απλά, δίνοντας:: 
