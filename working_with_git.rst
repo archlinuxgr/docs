@@ -65,21 +65,52 @@
 	
 	cat ~/.ssh/gitorious_rsa.pub | xclip
 
-Ύστερα, το κάνουμε επικόλληση με middle click ή Shift+Insert.
+Ύστερα, το κάνουμε επικόλληση με middle click ή Shift+Insert. Πατάμε save και θα δούμε το fingerprint του public κλειδιού μας στο dashboard μας. Μην ανησυχήσετε αν έχει ένα ``x`` δίπλα αντί για tick. Σε λίγα λεπτά θα αλλάξει.
 
 Τροποποίηση του ssh config
 --------------------------
 
-Αυτό το βήμα είναι προαιρετικό σε περίπτωση που σας βγάλει μήνυμα λάθους, access denied. Αν όλα πάνε καλά απλά αγνοήστε αυτή την ενότητα. 
+Επειδή παραπάνω ονομάσαμε το κλειδί ``gitorious_rsa``, όταν κάνουμε push τις αλλαγές μας στο remote repository ίσως εμφανιστεί το παρακάτω μήνυμα\: ::
+	
+	Permission denied (publickey).
+	fatal: The remote end hung up unexpectedly
 
-Μερικές φορές το 
+Αυτό συμβαίνει συνήθως επειδή το git ψάχνει by default το κλειδί με όνομα ``id_rsa``. Πρέπει λοιπόν να δηλώσουμε χειροκίνητα ποιο κλειδί να χρησιμοποιήσει το gitorious. 
+Πάμε λοιπόν και ανοίγουμε το αρχείο ``~/.ssh/config``. Αν δεν υπάρχει το δημιουργούμε. Εκεί ορίζουμε τα εξής στοιχεία\:  ::
+
+	Host gitorious.org
+		User username
+		Hostname gitorious.org
+		PreferredAuthentications publickey
+		IdentityFile /home/user/.ssh/gitorious_rsa
+
+όπου ``username`` το όναμα του χρήστη στο gitorious και ``user`` το όνομα του χρήστη στο pc μας. 
+
+Τσεκάροντας ότι όλα έχουν πάει καλά
+-----------------------------------
+
+Έχοντας ακολουθήσει τα προηγούμενα βήματα, αν τρέξουμε  ::
+
+	ssh -T git@gitorious.org
+
+θα πάρουμε το μήνυμα ::
+
+	Welcome, user. Use git to push/pull your repositories
+
+Αυτό σημαίνει πως έχουν πάει όλα καλά και μπορούμε πλέον να χρησιμοποιήσουμε το gitorious :)
 
 Clone του repository
 --------------------
 
+Τρέχουμε την εντολή::
+	
+	git clone git@gitorious.org:archlinuxgr-repo/archlinuxgr-repo.git ~/ArchGR/
+
+Πλέον έχουμε *κλωνοποιήσει* όλο το repository, όπου είναι ουσιαστικά ένας φάκελος όπου περιέχει όλα τα PKGBUILDs των πακέτων που έχουμε στο server. Αν θέλει κάποιος να αλλάξει τοποθεσία, μπορεί να το δηλώσει ακριβώς μετά τη διεύθυνση δίνοντας είτε το absolute path ή το relative. 
 
 Προσθήκη δικών μας πακέτων
 --------------------------
+
 
 
 Pull, commit, push και άλλα καλούδια
