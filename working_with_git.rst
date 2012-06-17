@@ -20,14 +20,9 @@
 
 Για να δημιουργήσουμε ένα ssh key εκτελούμε την παρακάτω εντολή ::
 
-	ssh-keygen -t rsa -C "name@archlinux.gr"
+	ssh-keygen -t rsa -C "name@archlinux.gr" -f $HOME/.ssh/gitorious
 
-όπου ``name@archlinux.gr`` το mail μας. Μόλις πατήσουμε enter θα μας ρωτήσει πού να σώσει το κλειδί. Γράφουμε όλη τη διαδρομή καθώς και το όνομα του κλειδιού, στην περίπτωσή μας έστω ``gitorious_rsa``. ::
-
-	Generating public/private rsa key pair.
-	Enter file in which to save the key (/home/user/.ssh/id_rsa): 
-	/home/user/.ssh/gitorious_rsa
-
+όπου ``name@archlinux.gr`` το mail μας. Με το -f λέμε σε ποιο file θα σωθεί το κλειδί. Στην περίπτωσή μας το ονομάσαμε gitorious.
 Έπειτα θα μας ζητηθεί ένα passphrase. Μπορούμε να το αφήσουμε κενό ώστε κάθε φορά που θα κάνουμε push τις αλλαγές μας στο gitorious, να μη ζητάει passphrase. 
 
 *Eίναι καλή πρακτική να βάζουμε όμως για μεγαλύτερη ασφάλεια σε περίπτωση που το ssh key πέσει σε λάθος χέρια.*
