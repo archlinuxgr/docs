@@ -3,7 +3,7 @@
 
 # You can set these variables from the command line.
 SPHINXOPTS    =
-SPHINXBUILD   = sphinx-build
+SPHINXBUILD   = sphinx-build2
 PAPER         =
 BUILDDIR      = _build
 
@@ -77,17 +77,17 @@ qthelp:
 	@echo
 	@echo "Build finished; now you can run "qcollectiongenerator" with the" \
 	      ".qhcp project file in $(BUILDDIR)/qthelp, like this:"
-	@echo "# qcollectiongenerator $(BUILDDIR)/qthelp/ArchlinuxGRRepo.qhcp"
+	@echo "# qcollectiongenerator $(BUILDDIR)/qthelp/test.qhcp"
 	@echo "To view the help file:"
-	@echo "# assistant -collectionFile $(BUILDDIR)/qthelp/ArchlinuxGRRepo.qhc"
+	@echo "# assistant -collectionFile $(BUILDDIR)/qthelp/test.qhc"
 
 devhelp:
 	$(SPHINXBUILD) -b devhelp $(ALLSPHINXOPTS) $(BUILDDIR)/devhelp
 	@echo
 	@echo "Build finished."
 	@echo "To view the help file:"
-	@echo "# mkdir -p $$HOME/.local/share/devhelp/ArchlinuxGRRepo"
-	@echo "# ln -s $(BUILDDIR)/devhelp $$HOME/.local/share/devhelp/ArchlinuxGRRepo"
+	@echo "# mkdir -p $$HOME/.local/share/devhelp/test"
+	@echo "# ln -s $(BUILDDIR)/devhelp $$HOME/.local/share/devhelp/test"
 	@echo "# devhelp"
 
 epub:
