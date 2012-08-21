@@ -13,7 +13,7 @@ ArchlinuxGR Repo Guide
  
 #. Κλωνοποίηση του repository ::
 
-		git clone git://github.com:archlinux-greece/docs.git
+		git clone git://github.com:archlinuxgr/docs.git
 
 #. Για το χτίσιμο ενός html based αρχείου ::	
 		
